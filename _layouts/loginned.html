@@ -3,6 +3,8 @@ layout: default
 ---
     <h1>Area Riservata</h1>
     <p>Benvenuto nell'area protetta.</p>
+    {{ content }}
+
     <button onclick="netlifyIdentity.logout()">Logout</button>
 <script>
     netlifyIdentity.on("init", user => {
