@@ -1,10 +1,10 @@
 ---
-layout: page
-title: Cookie Policy
+layout: loginned
+title: Portale
 description:
 lang: it
-ref: cookie-policy
-permalink: /it/cookie-policy
+ref: 
+permalink: /=user
 ---
 
 Questo è un esempio di pagina per una "cookie policy".
