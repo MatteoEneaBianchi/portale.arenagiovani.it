@@ -7,3 +7,4 @@ ref: homepage
 permalink: /
 order: 1
 ---
+{% include dash.html %}
