@@ -1,0 +1,12 @@
+---
+layout: default
+---
+    <h1>Area Riservata</h1>
+    <p>Benvenuto nell'area protetta.</p>
+    <button onclick="netlifyIdentity.logout()">Logout</button>
+    
+    <script>
+        if (!netlifyIdentity.currentUser()) {
+            window.location.href = "/";
+        }
+    </script>
