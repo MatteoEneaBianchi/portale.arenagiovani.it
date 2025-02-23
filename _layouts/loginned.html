@@ -2,7 +2,9 @@
 layout: default
 ---
 
+{{ content }}
 
+<div class="container">
 <div class="row">
   <div class="col-12 col-lg-8">
     <!--start card-->
@@ -26,11 +28,9 @@ layout: default
 </div>
 
 {% include posts.html %}
+</div>
 
 
-
-
-{{ content }}
 
     <button onclick="netlifyIdentity.logout()">Logout</button>
 <script>
