@@ -1,0 +1,12 @@
+---
+layout: default
+---
+    <h1>Benvenuto</h1>
+    <p>Accedi per continuare.</p>
+    <button onclick="netlifyIdentity.open()">Login</button>
+    
+    <script>
+        netlifyIdentity.on("login", user => {
+            window.location.href = "/=user";
+        });
+    </script>
