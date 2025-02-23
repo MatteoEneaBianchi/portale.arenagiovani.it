@@ -6,5 +6,5 @@ lang: it
 ref: 
 permalink: /=user
 ---
+{% include dash.html %}
 
-Questo è un esempio di pagina per una "cookie policy".
