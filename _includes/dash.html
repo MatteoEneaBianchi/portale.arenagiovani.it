@@ -3,18 +3,14 @@
             <div class="cmp-breadcrumbs" role="navigation">
               <nav class="breadcrumb-container" aria-label="breadcrumb">
                 <ol class="breadcrumb p-0" data-element="breadcrumb">
-                  <li class="breadcrumb-item"><a href="homepage.html">Home</a><span class="separator">/</span></li>
+                  <li class="breadcrumb-item"><a href="/">Home</a><span class="separator">/</span></li>
                   <li class="breadcrumb-item active" aria-current="page">Area personale</li>
                 </ol>
               </nav>
             </div>
             <div class="cmp-heading pb-3 pb-lg-4">
               <h1 class="title-xxxlarge">Ciao <span id="user-name"></h1>
-            
-              <p class="subtitle-small">CF: </p>
-          
-
-<script>
+                      <script>
     netlifyIdentity.on("init", user => {
         if (user) {
             document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
@@ -61,9 +57,9 @@
                                 <svg class="icon icon-sm me-2" aria-hidden="true">
                                   <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-files"></use>
                                 </svg>
-                                  <h3 class="t-primary mb-2 title-small-semi-bold">
+                                  <h4 class="t-primary mb-2 title-small-semi-bold">
                                      <a href="#">Iscrizione alla Scuola d’Infanzia</a>
-                                  </h3>
+                                  </h4>
                               </div>
                               <div class="cmp-icon-card__description">
                                 <date class="date-xsmall ml-30">15/02/2022</date>
@@ -76,9 +72,9 @@
                                 <svg class="icon icon-sm me-2" aria-hidden="true">
                                   <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-files"></use>
                                 </svg>
-                                  <h3 class="t-primary mb-2 title-small-semi-bold">
+                                  <h4 class="t-primary mb-2 title-small-semi-bold">
                                      <a href="#">Pagamento contravvenzione</a>
-                                  </h3>
+                                  </h4>
                               </div>
                               <div class="cmp-icon-card__description">
                                 <date class="date-xsmall ml-30">23/01/2022</date>
@@ -91,21 +87,15 @@
                                 <svg class="icon icon-sm me-2" aria-hidden="true">
                                   <use href="../assets/bootstrap-italia/dist/svg/sprites.svg#it-files"></use>
                                 </svg>
-                                  <h3 class="t-primary mb-2 title-small-semi-bold">
+                                  <h4 class="t-primary mb-2 title-small-semi-bold">
                                      <a href="#">Richiesta assegno maternità</a>
-                                  </h3>
+                                  </h4>
                               </div>
                               <div class="cmp-icon-card__description">
                                 <date class="date-xsmall ml-30">01/10/2022</date>
                               </div>
                             </div>
                           </div>
-                          <button type="button" class="btn btn-xs btn-me btn-label t-primary px-0">
-                          
-                          
-                          
-                           <span class="">Vedi altre attività</span>
-                          </button>
         </div>
       </div>
     </div>
