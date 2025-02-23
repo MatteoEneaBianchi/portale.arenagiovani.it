@@ -4,9 +4,11 @@ layout: default
     <h1>Area Riservata</h1>
     <p>Benvenuto nell'area protetta.</p>
     <button onclick="netlifyIdentity.logout()">Logout</button>
-    
-    <script>
-        netlifyIdentity.on("login", user => {
+<script>
+    netlifyIdentity.on("init", user => {
+        if (!user) {
             window.location.href = "/";
-        });
-    </script>
+        }
+    });
+</script>
+
