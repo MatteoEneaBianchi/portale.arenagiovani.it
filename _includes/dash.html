@@ -12,6 +12,33 @@
               <h1 class="title-xxxlarge">Ciao <span id="user-name"></h1>
             
               <p class="subtitle-small">CF: </p>
+          
+
+<script>
+    netlifyIdentity.on("init", user => {
+        if (user) {
+            document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
+            document.getElementById("user-box").style.display = "block";
+        }
+    });
+
+    netlifyIdentity.on("login", user => {
+        document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
+        document.getElementById("user-box").style.display = "block";
+    });
+
+    netlifyIdentity.on("logout", () => {
+        document.getElementById("user-box").style.display = "none";
+    });
+</script>
+            
+            
+            </div>
+          </div>
+</main>
+
+
+
             
 <ul class="nav nav-tabs nav-tabs-icon-text auto">
   <li class="nav-item">
@@ -38,27 +65,4 @@
       Tab 4
     </a>
   </li>
-</ul>            
-
-<script>
-    netlifyIdentity.on("init", user => {
-        if (user) {
-            document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-            document.getElementById("user-box").style.display = "block";
-        }
-    });
-
-    netlifyIdentity.on("login", user => {
-        document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-        document.getElementById("user-box").style.display = "block";
-    });
-
-    netlifyIdentity.on("logout", () => {
-        document.getElementById("user-box").style.display = "none";
-    });
-</script>
-            
-            
-            </div>
-          </div>
-</main>
+</ul>  
