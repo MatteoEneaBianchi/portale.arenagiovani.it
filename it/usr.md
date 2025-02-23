@@ -6,4 +6,3 @@ lang: it
 ref: 
 permalink: /=user
 ---
-{% include dash.html %}
