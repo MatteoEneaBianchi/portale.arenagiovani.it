@@ -7,7 +7,6 @@ ref:
 permalink: /=user
 ---
 
-
 <section class="it-hero-wrapper it-hero-small-size"  aria-label="In evidenza">
    <div class="img-responsive-wrapper">
       <div class="img-responsive">
