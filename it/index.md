@@ -7,4 +7,10 @@ ref: homepage
 permalink: /
 order: 1
 ---
-{% include dash.html %}
+
+<style>
+  <style>
+    .centrato {text-align: center;}
+  </style>
+</style>
+<div class="centrato"><h1><div id="clock">00:00:00</div></h1></div>
