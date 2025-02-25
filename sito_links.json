@@ -1,0 +1,18 @@
+{
+  "nome_sito": "<nome sito>",
+  "link_sito": "<link sito>",
+  "link_visualizzati": [
+    {
+      "nome_link": "Home",
+      "url": "/home"
+    },
+    {
+      "nome_link": "Contatti",
+      "url": "/contatti"
+    },
+    {
+      "nome_link": "Chi Siamo",
+      "url": "/chi-siamo"
+    }
+  ]
+}
