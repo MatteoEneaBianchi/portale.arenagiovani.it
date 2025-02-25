@@ -1,0 +1,79 @@
+---
+layout: loginned
+title: Mappe
+description:
+lang: it
+ref: 
+permalink: /=mappe
+---
+
+<div class="it-list-wrapper">
+  <ul class="it-list">
+    <li>
+      <div class="list-item">
+        <div class="it-rounded-icon">
+          <svg class="icon">
+            <title>Cartella</title>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-folder"></use>
+          </svg>
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+        </div>
+      </div>
+    </li>
+    <li>
+      <a href="#" class="list-item">
+        <div class="it-rounded-icon">
+          <svg class="icon">
+            <title>Cartella</title>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-folder"></use>
+          </svg>
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Link</span>
+        </div>
+      </a>
+    </li>
+    <li>
+      <div class="list-item">
+        <div class="it-rounded-icon">
+          <svg class="icon">
+            <title>Cartella</title>
+            <use href="/bootstrap-italia/dist/svg/sprites.svg#it-folder"></use>
+          </svg>
+        </div>
+        <div class="it-right-zone">
+          <span class="text">Testo</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+
+
+
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+  // Inizializza Netlify Identity
+  if (typeof netlifyIdentity !== 'undefined') {
+    netlifyIdentity.init();
+  }
+
+  // Funzione per verificare se l'utente è autenticato
+  function checkAuthentication() {
+    const user = netlifyIdentity.currentUser();
+    
+    if (!user) {
+      // Se l'utente non è autenticato, reindirizza direttamente alla home
+      window.location.href = '/'; // Reindirizza alla home
+    }
+  }
+
+  // Esegui la verifica all'avvio della pagina
+  window.onload = checkAuthentication;
+</script>
