@@ -22,5 +22,15 @@
     
     setInterval(updateClock, 1000);
     updateClock();
-</script></body>
+</script>
+<script>
+  function updateDate() {
+    const now = new Date();
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('clock').textContent = now.toLocaleDateString('it-IT', options);
+  }
+
+  updateDate();
+</script>
+</body>
 </html>
