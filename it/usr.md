@@ -8,11 +8,11 @@ permalink: /=user
 ---
 
 <style>
-  <style>
     .centrato {text-align: center;}
   </style>
-</style>
-<div class="centrato"><h1><div id="clock">00:00:00</div></h1></div>
+<div class="centrato">
+  <h1><div id="clock"></div></h1>
+</div>
 
 
 <h2>Area Personale</h2>
