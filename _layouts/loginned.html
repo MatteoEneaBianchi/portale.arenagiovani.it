@@ -3,21 +3,4 @@ layout: default
 ---
 {{ content }}
             <div class="cmp-heading pb-3 pb-lg-4">
-              <h1 class="title-xxxlarge">Ciao <span id="user-name"></h1>
-              <script>
-    netlifyIdentity.on("init", user => {
-        if (user) {
-            document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-            document.getElementById("user-box").style.display = "block";
-        }
-    });
-
-    netlifyIdentity.on("login", user => {
-        document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-        document.getElementById("user-box").style.display = "block";
-    });
-
-    netlifyIdentity.on("logout", () => {
-        document.getElementById("user-box").style.display = "none";
-    });
-</script></div>
+              <h1 class="title-xxxlarge">Ciao <span id="user-name"></h1></div>
