@@ -100,12 +100,26 @@ permalink: /=user
 
 </div>
 
+<!-- Includi il Netlify Identity Widget -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    window.netlifyIdentity.on("init", (user) => {
-      if (user) {
-        document.getElementById("private-content").style.display = "block";
-      }
-    });
-  });
+  // Inizializza Netlify Identity
+  if (typeof netlifyIdentity !== 'undefined') {
+    netlifyIdentity.init();
+  }
+
+  // Funzione per verificare se l'utente è autenticato
+  function checkAuthentication() {
+    const user = netlifyIdentity.currentUser();
+    
+    if (!user) {
+      // Se l'utente non è autenticato, redirigi alla pagina di login
+      alert('Per favore, effettua il login per accedere a questa pagina.');
+      window.location.href = '/'; // La pagina di login
+    }
+  }
+
+  // Esegui la verifica all'avvio della pagina
+  window.onload = checkAuthentication;
 </script>
