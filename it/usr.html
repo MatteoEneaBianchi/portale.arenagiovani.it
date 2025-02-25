@@ -6,6 +6,7 @@ lang: it
 ref: 
 permalink: /=user
 ---
+<div id="private-content" style="display: none;">
 
 <section class="it-hero-wrapper it-hero-small-size"  aria-label="In evidenza">
    <div class="img-responsive-wrapper">
@@ -96,3 +97,15 @@ permalink: /=user
                 </form>
             </div>
         </div>
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.netlifyIdentity.on("init", (user) => {
+      if (user) {
+        document.getElementById("private-content").style.display = "block";
+      }
+    });
+  });
+</script>
