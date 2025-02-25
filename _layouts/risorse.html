@@ -1,0 +1,99 @@
+---
+layout: default
+---
+<style>
+    button {
+      border-radius: 8px;
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    table {
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    table th, table td {
+      text-align: center;
+      padding: 10px;
+    }
+
+    #fileInput {
+      margin-bottom: 20px;
+    }
+  </style>
+
+<div class="container mt-5">
+  <h2>Carica e Visualizza Risorse</h2>
+
+  <div class="mb-3">
+    <input type="file" id="fileInput" class="form-control">
+  </div>
+  <button onclick="uploadFile()" class="btn btn-primary">Carica</button>
+
+  <table class="table table-striped mt-4">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Link</th>
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+      <!-- I dati verranno inseriti qui -->
+    </tbody>
+  </table>
+
+  <button onclick="downloadFile()" class="btn btn-success mt-3">Salva</button>
+</div>
+
+<script>
+function uploadFile() {
+  const fileInput = document.getElementById('fileInput');
+  const reader = new FileReader();
+  
+  reader.onload = function(event) {
+    const fileContent = event.target.result;
+    const lines = fileContent.split("\n");
+    let tableRows = '';
+    lines.forEach(line => {
+      if (line.startsWith('<nome>')) {
+        const nome = line.replace('<nome>', '').replace('</nome>', '');
+        const linkLine = lines[lines.indexOf(line) + 1]; 
+        const link = linkLine.replace('<link>', '').replace('</link>', '');
+        tableRows += `<tr><td>${nome}</td><td>${link}</td></tr>`;
+      }
+    });
+    document.getElementById('tableBody').innerHTML = tableRows;
+  };
+  
+  reader.readAsText(fileInput.files[0]);
+}
+
+function downloadFile() {
+  const tableRows = document.querySelectorAll('#tableBody tr');
+  let fileContent = '<certificato>\n<versione>/</versione>\n<data>2025</data>\n<autenticazione>Gabriel_Jones_Digital</autenticazione>\n</certificato>\n';
+  
+  tableRows.forEach(row => {
+    const cells = row.querySelectorAll('td');
+    const nome = cells[0].innerText;
+    const link = cells[1].innerText;
+    fileContent += `<nome>${nome}</nome>\n<link>${link}</link>\n\n`;
+  });
+
+  const blob = new Blob([fileContent], { type: 'text/plain' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'file_risorse.txt';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+</script>
