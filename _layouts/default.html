@@ -10,23 +10,6 @@
 </head>
 <body>
   {%- include header/header.html -%}
-  <h2>Benvento <span id="user-name"></span></h2>
-{{ content }}
-              <script>
-    netlifyIdentity.on("init", user => {
-        if (user) {
-            document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-            document.getElementById("user-box").style.display = "block";
-        }
-    });
-
-    netlifyIdentity.on("login", user => {
-        document.getElementById("user-name").textContent = user.user_metadata.full_name || "Utente";
-        document.getElementById("user-box").style.display = "block";
-    });
-
-    netlifyIdentity.on("logout", () => {
-        document.getElementById("user-box").style.display = "none";
-    });
-</script></body>
+  {{ content }}
+</body>
 </html>
