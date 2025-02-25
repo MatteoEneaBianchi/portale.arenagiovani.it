@@ -114,9 +114,8 @@ permalink: /=user
     const user = netlifyIdentity.currentUser();
     
     if (!user) {
-      // Se l'utente non è autenticato, redirigi alla pagina di login
-      alert('Per favore, effettua il login per accedere a questa pagina.');
-      window.location.href = '/'; // La pagina di login
+      // Se l'utente non è autenticato, reindirizza direttamente alla home
+      window.location.href = '/'; // Reindirizza alla home
     }
   }
 
