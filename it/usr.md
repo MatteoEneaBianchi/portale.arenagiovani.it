@@ -17,6 +17,15 @@ permalink: /=user
 
 <h2>Area Personale</h2>
 <p>Questo è il portale ufficiale di Arena Giovani, il punto di riferimento per soci e uffici dell’associazione, dove troverai tutte le risorse necessarie per svolgere le attività interne, accedere ai documenti ufficiali, consultare proposte e progetti in corso, rimanere aggiornato sugli incontri con il comune e sulle iniziative del gruppo, partecipando attivamente alla crescita della nostra comunità.</p>
+
+<section class="it-hero-wrapper it-hero-small-size"  aria-label="In evidenza">
+   <div class="img-responsive-wrapper">
+      <div class="img-responsive">
+         <div class="img-wrapper"><img src="https://gabriel-jones.online.upid.it/assets/c1.png" title="titolo immagine" alt="descrizione immagine"></div>
+      </div>
+   </div>
+</section>
+
 <h5>Documenti</h5>
 <table class="table table-striped">
     <thead>
