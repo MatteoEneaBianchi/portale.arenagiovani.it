@@ -7,6 +7,29 @@ ref:
 permalink: /=user
 ---
 
+<style>
+  <style>
+    .centrato {text-align: center;}
+  </style>
+</style>
+<div class="centrato"><h1><div id="clock">00:00:00</div></h1></div>
+
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
+
+
 <h2>Area Personale</h2>
 <p>Questo è il portale ufficiale di Arena Giovani, il punto di riferimento per soci e uffici dell’associazione, dove troverai tutte le risorse necessarie per svolgere le attività interne, accedere ai documenti ufficiali, consultare proposte e progetti in corso, rimanere aggiornato sugli incontri con il comune e sulle iniziative del gruppo, partecipando attivamente alla crescita della nostra comunità.</p>
 <h5>Documenti</h5>
