@@ -1,0 +1,95 @@
+---
+layout: loginned
+title: Sezione Educativa
+description:
+lang: it
+ref: 
+permalink: /=edu-section
+---
+<h3>Sezione Educativa</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+<script>
+  // Inizializza Netlify Identity
+  if (typeof netlifyIdentity !== 'undefined') {
+    netlifyIdentity.init();
+  }
+
+  // Funzione per verificare se l'utente è autenticato
+  function checkAuthentication() {
+    const user = netlifyIdentity.currentUser();
+    
+    if (!user) {
+      // Se l'utente non è autenticato, reindirizza direttamente alla home
+      window.location.href = '/'; // Reindirizza alla home
+    }
+  }
+
+  // Esegui la verifica all'avvio della pagina
+  window.onload = checkAuthentication;
+</script>
